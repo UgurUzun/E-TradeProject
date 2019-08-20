@@ -22,6 +22,8 @@ namespace E_TradeProject.MvcWebUI.Models
         public double Price { get; set; }
         [Display(Name = "Stok Adedi")]
         public int Stock { get; set; }
+        [Display(Name = "Anasayfada Mı?")]
+        public bool IsHome { get; set; }
         [Display(Name = "Onaylı Mı?")]
         public bool IsApproved { get; set; }
 
