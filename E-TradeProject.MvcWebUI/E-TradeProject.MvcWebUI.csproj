@@ -139,10 +139,23 @@
     <Compile Include="Migrations\201908202020399_second.Designer.cs">
       <DependentUpon>201908202020399_second.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908212002396_four.cs" />
+    <Compile Include="Migrations\201908212002396_four.Designer.cs">
+      <DependentUpon>201908212002396_four.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908212050218_productModel.cs" />
+    <Compile Include="Migrations\201908212050218_productModel.Designer.cs">
+      <DependentUpon>201908212050218_productModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908212105561_deneme.cs" />
+    <Compile Include="Migrations\201908212105561_deneme.Designer.cs">
+      <DependentUpon>201908212105561_deneme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectModels\ProductModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -189,10 +202,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Shared\ProductList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Tema\js\" />
+    <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -213,6 +228,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908202020399_second.resx">
       <DependentUpon>201908202020399_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908212002396_four.resx">
+      <DependentUpon>201908212002396_four.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908212050218_productModel.resx">
+      <DependentUpon>201908212050218_productModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908212105561_deneme.resx">
+      <DependentUpon>201908212105561_deneme.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

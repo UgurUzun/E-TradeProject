@@ -1,4 +1,4 @@
-﻿@model IEnumerable<E_TradeProject.MvcWebUI.Models.Product>
+﻿@model IEnumerable<E_TradeProject.MvcWebUI.SelectModels.ProductModel>
 
 @{
     ViewBag.Title = "Index";
@@ -21,25 +21,8 @@
 
 <div class="container mb-5">
 
-    <div class="row">
-        @foreach (var urun in Model)
-        {
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="@urun.Name">
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="/Home/Details/@urun.Id">@urun.Name</a></h5>
-                        <p class="card-text">
-                            @urun.Description
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">@urun.Price TL</small>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
+    @Html.Partial("ProductList", Model)
+
 </div>
 
 

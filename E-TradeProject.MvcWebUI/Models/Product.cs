@@ -20,7 +20,9 @@ namespace E_TradeProject.MvcWebUI.Models
         [Display(Name = "Tutar")]
         [Required]
         public double Price { get; set; }
-        [Display(Name = "Stok Adedi")]
+        [Display(Name="Resim")]
+        public string Image { get; set; }
+        [Display(Name = "Stok Adedi")]        
         public int Stock { get; set; }
         [Display(Name = "Anasayfada Mı?")]
         public bool IsHome { get; set; }
