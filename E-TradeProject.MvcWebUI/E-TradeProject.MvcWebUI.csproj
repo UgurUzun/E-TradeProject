@@ -188,6 +188,10 @@
     <Content Include="Tema\img\camera4.jpg" />
     <Content Include="Tema\productsDetails.html" />
     <Content Include="Tema\productsList.html" />
+    <Content Include="Upload\camera2.jpg" />
+    <Content Include="Upload\camera3.jpg" />
+    <Content Include="Upload\HuaweiP20.jpg" />
+    <Content Include="Upload\LenovoIdeapad700.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -207,7 +211,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Tema\js\" />
-    <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

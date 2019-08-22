@@ -3,7 +3,7 @@
 <div class="row">
     @foreach (var urun in Model)
     {
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
             <div class="card">
                 <img src="/Upload/@urun.Image" class="card-img-top" alt="@urun.Name">
                 <div class="card-body">
@@ -13,7 +13,8 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">@urun.Price TL</small>
+                    <small class="text-muted product-price">
+                    <i class="fa fa-try" aria-hidden="true"></i> @urun.Price</small>
                 </div>
             </div>
         </div>

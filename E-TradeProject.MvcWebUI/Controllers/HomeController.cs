@@ -17,16 +17,16 @@ namespace E_TradeProject.MvcWebUI.Controllers
             var products = db.Products
                              .Where(x=>x.IsHome == true && x.IsApproved == true)
                              .Select(i=>new ProductModel()
-                              {
+                             {
                                  Id = i.Id,
                                  Name = i.Name,
                                  Description = i.Description.Length>50 ? i.Description.Substring(0,47) + "..." : i.Description,
                                  Price = i.Price,
                                  Stock = i.Stock,
-                                 Image = i.Image,
+                                 Image = i.Image==null ? "HuaweiP20.jpg" : i.Image,
                                  CategoryId = i.CategoryId
 
-                              }).ToList();
+                             }).ToList();
 
             return View(products);
         }
@@ -42,7 +42,7 @@ namespace E_TradeProject.MvcWebUI.Controllers
                                  Description = i.Description.Length > 50 ? i.Description.Substring(0, 47) + "..." : i.Description,
                                  Price = i.Price,
                                  Stock = i.Stock,
-                                 Image = i.Image,
+                                 Image = i.Image == null ? "HuaweiP20.jpg" : i.Image,
                                  CategoryId = i.CategoryId
 
                              }).ToList();
@@ -55,7 +55,6 @@ namespace E_TradeProject.MvcWebUI.Controllers
             var products = db.Products.Where(x =>x.Id == id).FirstOrDefault();
             return View(products);
         }
-
 
     }
 }
