@@ -56,5 +56,11 @@ namespace E_TradeProject.MvcWebUI.Controllers
             return View(products);
         }
 
+        public PartialViewResult GetCategories()
+        {
+            var categories = db.Categories.ToList();
+            return PartialView(categories);
+        }
+
     }
 }

@@ -5,35 +5,46 @@
     height: 100% ;
 }
 
-#write-review
+#product-details h2
 {
-  margin-left: -70px;
+    font-size: 28px;
+    font-weight: 700;
 }
 
-#product-price
+#write-review {
+    margin-left: -50px;
+}
+
+.product-image
 {
-  font-size: 30px;
-  color: red; 
+    height: 400px;    
+}
+
+#product-price 
+{
+    font-size: 30px;
+    color: red;
 }
 
 .card-title
 {
     font-size: 18px;
-    /*font-weight: 400px;*/
-    /*color: #484848;*/
-    /*line-height: 1.35em;*/
-    /*height: 34px;*/
+    font-weight: 400;
+    color: #484848;
+    line-height: 1.35em;
+    height: 34px;
 }
 
-.card-text
+.description 
 {
     font-size: 14px;
+    height: 40px;
 }
 
 .product-price 
 {
     color: #414141;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 20px;
 }
 

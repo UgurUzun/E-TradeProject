@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<div class="container mb-5 mt-3">
+<div id="product-details" class="container mb-5 mt-3">
     <div class="row">
         <div class="col-md-6">
-            <img src="/Tema/img/camera3.jpg" class="img-fluid rounded">
+            <img src="/Upload/@Model.Image" class="img-fluid rounded">
         </div>
 
         <div class="col-md-6">
@@ -19,7 +19,14 @@
 
             <div class="row mt-2">
                 <div class="col-md-12">
-                    <span class="badge badge-primary">In Stock</span>
+                    @if (Model.IsApproved == true)
+                    {
+                        <span class="badge badge-primary">Stok Durumu: Var</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger">Stok Durumu: Yok</span>
+                    }
                     <span class="product-number">#46854</span>
                 </div>
             </div>
@@ -38,7 +45,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
                     <span class="badge badge-success">45</span>
                 </div>
 
@@ -56,7 +63,7 @@
             <div class="row mt-3">
                 <div class="col-md-12">
                     <button class="btn btn-success">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i>Sepete
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Sepete
                         Ekle
                     </button>
                 </div>

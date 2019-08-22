@@ -1,0 +1,14 @@
+﻿@model IEnumerable<E_TradeProject.MvcWebUI.Models.Category>
+
+<ul class="list-group">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+            <a href="/Home/List/@item.CategoryId">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                @item.Name
+            </a>
+        </li>
+    }
+</ul>
+
