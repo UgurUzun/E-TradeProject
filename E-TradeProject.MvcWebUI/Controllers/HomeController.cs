@@ -15,26 +15,7 @@ namespace E_TradeProject.MvcWebUI.Controllers
         public ActionResult Index()
         {
             var products = db.Products
-                             .Where(x=>x.IsHome == true && x.IsApproved == true)
-                             .Select(i=>new ProductModel()
-                             {
-                                 Id = i.Id,
-                                 Name = i.Name,
-                                 Description = i.Description.Length>50 ? i.Description.Substring(0,47) + "..." : i.Description,
-                                 Price = i.Price,
-                                 Stock = i.Stock,
-                                 Image = i.Image==null ? "HuaweiP20.jpg" : i.Image,
-                                 CategoryId = i.CategoryId
-
-                             }).ToList();
-
-            return View(products);
-        }
-
-        public ActionResult List()
-        {
-            var products = db.Products
-                             .Where(x => x.IsApproved == true)
+                             .Where(x => x.IsHome == true && x.IsApproved == true)
                              .Select(i => new ProductModel()
                              {
                                  Id = i.Id,
@@ -50,9 +31,33 @@ namespace E_TradeProject.MvcWebUI.Controllers
             return View(products);
         }
 
+        public ActionResult List(int? id)
+        {
+            var products = db.Products
+                             .Where(x => x.IsApproved == true)
+                             .Select(i => new ProductModel()
+                             {
+                                 Id = i.Id,
+                                 Name = i.Name,
+                                 Description = i.Description.Length > 50 ? i.Description.Substring(0, 47) + "..." : i.Description,
+                                 Price = i.Price,
+                                 Stock = i.Stock,
+                                 Image = i.Image == null ? "HuaweiP20.jpg" : i.Image,
+                                 CategoryId = i.CategoryId
+
+                             }).AsQueryable();
+
+            if(id != null)
+            {
+                products = products.Where(x => x.CategoryId == id);
+            }
+
+            return View(products.ToList());
+        }
+
         public ActionResult Details(int id)
         {
-            var products = db.Products.Where(x =>x.Id == id).FirstOrDefault();
+            var products = db.Products.Where(x => x.Id == id).FirstOrDefault();
             return View(products);
         }
 

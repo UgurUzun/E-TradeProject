@@ -1,14 +1,55 @@
 ﻿@model IEnumerable<E_TradeProject.MvcWebUI.Models.Category>
 
+@{
+    var selectedCategory = Url.RequestContext.RouteData.Values["id"];
+}
+
+
 <ul class="list-group">
+
+    @if (selectedCategory == null)
+    {
+        <a href="/Home/List" class="list-group-item active">
+            <i class="fa fa-list-ul" aria-hidden="true"></i> Tüm Kategoriler
+        </a>
+    }
+    else
+    {
+        <a href="/Home/List" class="list-group-item">
+            <i class="fa fa-list-ul" aria-hidden="true"></i> Tüm Kategoriler
+        </a>
+    }
+
+
+
     @foreach (var item in Model)
     {
-        <li class="list-group-item">
-            <a href="/Home/List/@item.CategoryId">
+        if (selectedCategory != null)
+        {
+            if (item.CategoryId == int.Parse(selectedCategory.ToString()))
+            {
+                <a href="/Home/List/@item.CategoryId" class="list-group-item active">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    @item.Name
+                </a>
+            }
+            else
+            {
+                <a href="/Home/List/@item.CategoryId" class="list-group-item">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    @item.Name
+                </a>
+            }
+
+        }
+        else
+        {
+            <a href="/Home/List/@item.CategoryId" class="list-group-item">
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                 @item.Name
             </a>
-        </li>
+        }
     }
+
 </ul>
 
