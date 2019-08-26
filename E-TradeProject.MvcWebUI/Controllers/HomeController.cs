@@ -47,7 +47,7 @@ namespace E_TradeProject.MvcWebUI.Controllers
 
                              }).AsQueryable();
 
-            if(id != null)
+            if (id != null)
             {
                 products = products.Where(x => x.CategoryId == id);
             }
