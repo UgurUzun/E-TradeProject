@@ -187,14 +187,21 @@
     <Compile Include="Migrations\201909141529018_Identity.Designer.cs">
       <DependentUpon>201909141529018_Identity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909142120094_orders.cs" />
+    <Compile Include="Migrations\201909142120094_orders.Designer.cs">
+      <DependentUpon>201909142120094_orders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\EnumOrderState.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetailsModel.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\ShippingDetails.cs" />
+    <Compile Include="Models\UserOrderModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectModels\ProductModel.cs" />
   </ItemGroup>
@@ -267,6 +274,8 @@
     <Content Include="Views\Cart\Summary.cshtml" />
     <Content Include="Views\Cart\Checkout.cshtml" />
     <Content Include="Views\Cart\Completed.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -300,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909141529018_Identity.resx">
       <DependentUpon>201909141529018_Identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909142120094_orders.resx">
+      <DependentUpon>201909142120094_orders.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
