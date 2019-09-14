@@ -11,6 +11,7 @@ using E_TradeProject.MvcWebUI.Models;
 
 namespace E_TradeProject.MvcWebUI.Controllers
 {
+    [Authorize(Roles ="admin")]
     public class CategoryController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

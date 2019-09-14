@@ -7,13 +7,13 @@ namespace E_TradeProject.MvcWebUI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class deneme : IMigrationMetadata
+    public sealed partial class Identity : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(deneme));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Identity));
         
         string IMigrationMetadata.Id
         {
-            get { return "201908212105561_deneme"; }
+            get { return "201909141529018_Identity"; }
         }
         
         string IMigrationMetadata.Source

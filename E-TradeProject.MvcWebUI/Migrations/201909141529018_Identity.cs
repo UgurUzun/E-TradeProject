@@ -3,7 +3,7 @@ namespace E_TradeProject.MvcWebUI.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class deneme : DbMigration
+    public partial class Identity : DbMigration
     {
         public override void Up()
         {
