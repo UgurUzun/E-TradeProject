@@ -62,10 +62,17 @@
 
             <div class="row mt-3">
                 <div class="col-md-12">
-                    <button class="btn btn-success">
-                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Sepete
-                        Ekle
-                    </button>
+
+
+                    @using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                        @Html.HiddenFor(i => i.Id)
+                        <button type="submit" class="btn btn-success">
+                            <i class="fa fa-cart-plus" aria-hidden="true"></i>Sepete Ekle
+                        </button>
+                    }
+
+
                 </div>
             </div>
 
