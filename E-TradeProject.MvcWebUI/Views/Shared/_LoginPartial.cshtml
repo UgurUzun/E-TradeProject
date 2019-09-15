@@ -1,30 +1,25 @@
 ﻿
-@*<form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Kategori, Marka, Ürün" aria-label="Search">
-    <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class=" fa fa-search" aria-hidden="true"></i> Ara</button>
-</form>*@
-
 
 <ul class="navbar-nav  my-2 my-lg-0">
 
     @if (Request.IsAuthenticated)
     {
-        //kullanıcı adını ve logout linklerini çıkar
+        
         <li class="nav-item active">
             <a class="nav-link" href="/Account">@User.Identity.Name</a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/Account/Logout">Logout</a>
+            <a class="nav-link" href="/Account/Logout">Çıkış Yap</a>
         </li>
     }
     else
     {
-        //login ve register linkleri çıkar
+        
         <li class="nav-item active">
-            <a class="nav-link" href="/Account/Login">Login</a>
+            <a class="nav-link" href="/Account/Login">Giriş</a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/Account/Register">Register</a>
+            <a class="nav-link" href="/Account/Register">Üye Ol</a>
         </li>
     }
 </ul>

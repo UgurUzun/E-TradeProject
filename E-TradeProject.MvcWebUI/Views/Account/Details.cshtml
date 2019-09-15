@@ -15,7 +15,7 @@
 
             <dl class="row">
 
-                <dt class="col-sm-3">Order State</dt>
+                <dt class="col-sm-3">Sipariş Durumu</dt>
                 <dd class="col-sm-9">
                     @if (Model.OrderState == EnumOrderState.Waiting)
                     {
@@ -27,19 +27,19 @@
                     }
                 </dd>
 
-                <dt class="col-sm-3">Order Id</dt>
+                <dt class="col-sm-3">Sipariş ID</dt>
                 <dd class="col-sm-9">@Model.OrderId</dd>
 
-                <dt class="col-sm-3">Order Number</dt>
+                <dt class="col-sm-3">Sipariş Numarası</dt>
                 <dd class="col-sm-9">@Model.OrderNumber</dd>
 
-                <dt class="col-sm-3">Total</dt>
+                <dt class="col-sm-3">Toplam Fiyat</dt>
                 <dd class="col-sm-9">
                     <i class="fa fa-try" aria-hidden="true"></i>
                     @Model.Total
                 </dd>
 
-                <dt class="col-sm-3">Order Date</dt>
+                <dt class="col-sm-3">Sipariş Tarih</dt>
                 <dd class="col-sm-9">@Model.OrderDate</dd>
 
 
@@ -54,16 +54,16 @@
                     @Model.PostaKodu
                 </dd>
 
-                <dt class="col-sm-3">Products</dt>
+                <dt class="col-sm-3">Ürünler</dt>
                 <dd class="col-sm-9">
                     <table class="table table-bordered">
 
                         <thead>
                             <tr>
-                                <th>Image</th>
-                                <th style="width: 45%;">Product Name</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
+                                <th>Resim</th>
+                                <th style="width: 45%;">ürün Adı</th>
+                                <th>Adet</th>
+                                <th>Fiyat</th>
                                 <th style="width: 10%;"></th>
                             </tr>
                         </thead>
@@ -88,7 +88,7 @@
                                     <td>
                                         <a href="/Home/Details/@item.ProductId" class="btn btn-primary btn-sm" target="_blank">
                                             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                            Product Details
+                                            Ürün Detay
                                         </a>
                                     </td>
                                 </tr>

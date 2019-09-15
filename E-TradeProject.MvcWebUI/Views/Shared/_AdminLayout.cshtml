@@ -21,7 +21,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Admin Paneli</a>
+            <a class="navbar-brand" href="/Order">Admin Paneli</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
                     aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,11 +36,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/Product">Ürünler</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Order">Siparişler</a>
+                    </li>
                 </ul>
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Kategori, Marka, Ürün" aria-label="Search">
-                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class=" fa fa-search" aria-hidden="true"></i> Ara</button>
-                </form>
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </nav>
@@ -69,7 +69,7 @@
 
 <footer class="footer mt-auto py-3">
     <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
+        <span class="text-muted">Şuanda Admin Panelinde Bulunmaktasınız.</span>
     </div>
 </footer>
 
